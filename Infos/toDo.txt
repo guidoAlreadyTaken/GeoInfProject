@@ -1,0 +1,7 @@
+GeoInfHutFnder
+
+To do:
+
+- Mettre en place la carte MapBox
+- Créer un espace interaction user
+- Faire le lien entre espace user et le fichier GeoJson
