@@ -1,3 +1,4 @@
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2hyaXNiYWVyIiwiYSI6ImNqYjZsa2o4bjNudnoycW85b2d2ejAxamQifQ.lhJXOzm7Wl1GGyIZRUAECg';
 var map;
 
@@ -11,4 +12,5 @@ map = new mapboxgl.Map({
 
 map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
+
 }));
