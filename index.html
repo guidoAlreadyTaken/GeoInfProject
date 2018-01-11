@@ -1,49 +1,28 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset='utf-8' />
     <title>Projet GeoInf Colin Mottas & Christophe Baer</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link type="text/js" href="js/hutfinder.js">
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
 </head>
 <body>
 
-<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
-<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
+
 <div id='map'></div>
 
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2hyaXNiYWVyIiwiYSI6ImNqYjZsa2o4bjNudnoycW85b2d2ejAxamQifQ.lhJXOzm7Wl1GGyIZRUAECg';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
-    center: [-79.4512, 43.6568],
-    zoom: 3
-});
-var styleHut = new ol.style.Style({
-    image: new ol.style.Icon({
-        opacity: 1,
-        src:'img/hut-icon.png',
-        scale:0.5
-    })
-});
 
-var vectorLayer = new ol.layer.Vector({
-    source: new ol.source.Vector(),
-    style:styleHut
-});
-map.addLayer(vectorLayer);
-map.addControl(new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken
-}));
-</script>
+<!--
+_____________________________________________________
+
+-->
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
+<script src="js/hutfinder.js"></script>
 
 </body>
 </html>
