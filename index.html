@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-coucou
 <html>
 <head>
     <meta charset='utf-8' />
@@ -26,9 +25,21 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
     center: [-79.4512, 43.6568],
-    zoom: 13
+    zoom: 3
+});
+var styleHut = new ol.style.Style({
+    image: new ol.style.Icon({
+        opacity: 1,
+        src:'img/hut-icon.png',
+        scale:0.5
+    })
 });
 
+var vectorLayer = new ol.layer.Vector({
+    source: new ol.source.Vector(),
+    style:styleHut
+});
+map.addLayer(vectorLayer);
 map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
 }));
